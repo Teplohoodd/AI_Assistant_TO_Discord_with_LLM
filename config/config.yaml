@@ -1,0 +1,39 @@
+discord:
+  token: "YOUR_TOKEN_HERE"
+  command_prefix: "/"
+  
+voice:
+  activation_keywords:
+    - "бот"
+    - "bot"
+    - "ассистент"
+  deactivation_commands:
+    - "замолчи"
+    - "стоп"
+    - "stop"
+  silence_timeout: 300  # seconds before bot makes random utterance
+  silence_utterance_chance: 0.3  # probability of making an utterance after timeout
+  
+stt:
+  model: "google"
+  language: "auto"
+  
+tts:
+  model: "silero"
+  voice: "female"
+  language: "auto"
+  speech_rate: 0.33  # speed of speach
+  
+llm:
+  provider: "ollama"
+  model: "mixtral:8x7b"
+  api_url: "http://localhost:11434/api/chat"
+  context_length: 30
+  timeout: 90
+  max_retries: 1
+  hardware:
+    accelerator: "cuda"
+  
+logging:
+  level: "INFO"
+  file: "bot.log"

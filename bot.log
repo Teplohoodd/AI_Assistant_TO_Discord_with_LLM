@@ -1,0 +1,85 @@
+2025-04-04 02:05:45 - __main__ - INFO - Starting Discord AI Voice Assistant
+2025-04-04 02:05:45 - stt - WARNING - Unknown STT model 'google', falling back to Whisper
+2025-04-04 02:05:52 - tts - INFO - Initialized Silero TTS with kseniya_v2 voice (language: ru)
+2025-04-04 02:05:52 - tts - INFO - Loaded silero TTS model with 'kseniya_v2' voice
+2025-04-04 02:05:52 - llm - INFO - Initialized ollama LLM with model 'mixtral:8x7b'
+2025-04-04 02:05:52 - discord.client - INFO - logging in using static token
+2025-04-04 02:07:02 - __main__ - INFO - Starting Discord AI Voice Assistant
+2025-04-04 02:07:02 - stt - WARNING - Unknown STT model 'google', falling back to Whisper
+2025-04-04 02:07:09 - tts - INFO - Initialized Silero TTS with kseniya_v2 voice (language: ru)
+2025-04-04 02:07:09 - tts - INFO - Loaded silero TTS model with 'kseniya_v2' voice
+2025-04-04 02:07:09 - llm - INFO - Initialized ollama LLM with model 'mixtral:8x7b'
+2025-04-04 02:07:09 - discord.client - INFO - logging in using static token
+2025-04-04 17:07:35 - __main__ - INFO - Starting Discord AI Voice Assistant
+2025-04-04 17:07:35 - stt - WARNING - Unknown STT model 'google', falling back to Whisper
+2025-04-04 17:07:46 - tts - ERROR - Error loading Silero model: No module named 'omegaconf'
+2025-04-04 17:08:16 - __main__ - INFO - Starting Discord AI Voice Assistant
+2025-04-04 17:08:16 - stt - WARNING - Unknown STT model 'google', falling back to Whisper
+2025-04-04 17:08:18 - tts - INFO - Initialized Silero TTS with kseniya_v2 voice (language: ru)
+2025-04-04 17:08:18 - tts - INFO - Loaded silero TTS model with 'kseniya_v2' voice
+2025-04-04 17:08:18 - llm - INFO - Initialized ollama LLM with model 'mixtral:8x7b'
+2025-04-04 17:08:18 - discord.client - INFO - logging in using static token
+2025-04-04 17:10:06 - __main__ - ERROR - Error running bot: Connection timeout to host https://discord.com/api/v10/users/@me
+Traceback (most recent call last):
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 1122, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1146, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1179, in _create_connection_transport
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 1400, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 1369, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\connector.py", line 1112, in _wrap_create_connection
+    async with ceil_timeout(
+  File "C:\Users\Teplohood\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\main.py", line 102, in main
+    await bot.start()
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\bot.py", line 335, in start
+    await self.bot.start(self.discord_config["token"])
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\discord\client.py", line 823, in start
+    await self.login(token)
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\discord\client.py", line 652, in login
+    data = await self.http.static_login(token)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\discord\http.py", line 828, in static_login
+    data = await self.request(Route('GET', '/users/@me'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\discord\http.py", line 642, in request
+    async with self.__session.request(method, url, **kwargs) as response:
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Teplohood\Desktop\discord-ai-voice-assistant2\venv\Lib\site-packages\aiohttp\client.py", line 707, in _request
+    raise ConnectionTimeoutError(
+aiohttp.client_exceptions.ConnectionTimeoutError: Connection timeout to host https://discord.com/api/v10/users/@me
+2025-04-04 18:16:45 - __main__ - INFO - Starting Discord AI Voice Assistant
+2025-04-04 18:16:45 - stt - WARNING - Unknown STT model 'google', falling back to Whisper
+2025-04-04 18:16:47 - tts - INFO - Initialized Silero TTS with kseniya_v2 voice (language: ru)
+2025-04-04 18:16:47 - tts - INFO - Loaded silero TTS model with 'kseniya_v2' voice
+2025-04-04 18:16:47 - llm - INFO - Initialized ollama LLM with model 'mixtral:8x7b'
+2025-04-04 18:16:47 - discord.client - INFO - logging in using static token
